@@ -1,0 +1,387 @@
+.bg {
+width: 360px;
+height: 640px;
+margin-top: 100px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.newsfeed-box a {
+    color: inherit;
+}
+
+.greensurfing-p {
+    width: 50%;
+    text-align: left;
+    margin-top: -10px;
+}
+.greensurfing img {
+    position: absolute;
+    right: 10px;
+    margin-top: -170px;
+}
+.greensurfing {
+    margin-left: 10px;
+}
+
+.headline {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #393939;
+}
+.bewertung {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #393939;
+}
+.beschreibung {
+    margin-top: 80px;
+}
+.beschreibung p {
+    text-align: left;
+    margin-left: 10px;
+}
+.bold {
+    font-weight: bold;
+}
+.profile-overview {
+    background-color: #fafafa;
+    padding-bottom: 160px;
+}
+.following {
+    position: absolute;
+    left: 20px;
+    top: 260px;
+}
+.follower {
+    position: absolute;
+    right: 10px;
+    top: 260px;
+}
+.definer {
+    font-weight: bold;
+    color: #393939;
+}
+.counter {
+    color: #959595;
+}
+
+.name {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #393939;
+}
+.follow {
+    position: absolute;
+    top: 440px;
+    right: 120px;
+    width: 150px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px;
+    background-color: #5ddbd8;
+    box-shadow: 0px 0px 5px #c4c4c4;
+
+}
+.message {
+    position: absolute;
+    top: 440px;
+    right: 75px;
+    color: #ffffff;
+    padding: 8px;
+    font-size: 18px;
+    background-color: #5ddbd8;
+    margin-left: 5px;
+    border: solid 1.5px #ffffff;
+    box-shadow: 0px 0px 5px #c4c4c4;
+}
+.view {
+    position: absolute;
+    top: 510px;
+    width: 360px;
+    text-align: center;
+    border-top: 1px solid #bbbbbb;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: inset 0 -7px 9px -7px rgb(174, 174, 174);
+}
+.view i {
+    color: #bbbbbb;
+    margin: 0 40px 0 40px;
+}
+table {
+    position: absolute;
+    top: 570px;
+    left: 0;
+    background-color: #f2f2f2;
+}
+.imgrow {
+    width: 360px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.square {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.button-login {
+
+    margin-left: 0px;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 42px;
+    padding-top: 80px;
+    padding-left: 35px;
+    color: #fff;
+}
+
+button {
+    width: 330px;
+    border-radius: 50px;
+    padding: 14px 40px;
+    background-color: rgba(187, 244, 255, 0.44);
+    color: #5b5b5b;
+    border: 1.5px solid #f6f6f6;
+    text-align: center;
+    box-shadow: 0px 0px 10px #ababab;
+}
+
+p {
+    color: #393939;
+    text-align: center;
+}
+
+.no-acc {
+    margin-top: 110px;
+    text-align: center;
+}
+
+#screen6-img {
+    position: absolute;
+    top: 32.8vh;
+    left: 38.8vw;
+    /*background-color: #000000;*/
+    width: 140px;
+    height: 140px;
+}
+
+.p7 {
+    color: #393939;
+    font-size: 16px;
+}
+
+.nav-hamburger {
+    background: #40c5c2;
+    color: #fdffeb;
+    cursor: pointer;
+    height: 100vh;
+    width: 250px;
+    margin-left: 0px;
+    display: none;
+
+    position: fixed;
+    margin-top: 54px;
+    z-index: 100;
+    box-shadow: none;
+}
+
+.glass.expanded {
+    filter: blur(10px);
+}
+
+.nav-hamburger.expanded { margin-left: auto; margin-right: auto; display: block;}
+
+.nav-hamburger ul {
+    position: absolute;
+    top: 20%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+
+.nav-hamburger ul li {
+    color: inherit;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    text-decoration: none;
+}
+.nav-hamburger h1 {
+    color: inherit;
+    padding: 20px;
+    margin-left: 0px;
+    margin-top: 10px;
+    background-color: #5884a9;
+    text-align: left;
+}
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 360px;
+    height: 55px;
+    background-color: #fafafa;
+    box-shadow: inset 0 7px 9px -7px rgb(223, 223, 223);
+    text-align: center;
+    z-index: 200;
+}
+
+.nav-icon {
+    margin: 10px 14px 0 14px;
+    font-size: 38px;
+    color: #a1a1a1;
+}
+
+.mood {
+    color: #00C853;
+}
+
+.tags-auswahl {
+    display:table-cell; vertical-align:middle;
+    margin: 4%;
+    padding: 4%;
+    text-align: justify;
+}
+.tag {
+    color: #393939;
+    display: inline-block;
+    border-radius: 5px;
+    /*background-color: #36b6c8;*/
+    background-color: rgba(195, 240, 246, 0.5);
+    border: 1px solid #ffffff;
+    padding: 3% 4.5% 3% 4.5%;
+    margin-bottom: 5px;
+}
+.tag.expanded {
+    color: #ffffff;
+    background-color: #0cc3d0;
+}
+
+.newsfeed-header {
+    display: inline-block;
+    color: #fdffeb;
+    font-size: 40px;
+    margin-top: -60px;
+}
+header h1 {
+    margin-left: 10px;
+}
+header {
+    position: fixed;
+    z-index: 100;
+}
+.menu {
+    margin-left: -10px;
+    background-color: rgba(223, 223, 223, 0.34);
+    font-size: 30px;
+    padding: 10px;
+}
+
+.search {
+    margin-left: 50px;
+    margin-bottom: -40px;
+}
+
+.newsfeed-box {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 2%;
+    margin-bottom: 4%;
+    color: #8d8d8d;
+    padding-bottom: 10px;
+    font-size: 11px;
+    box-shadow: 0px 2px 10px #5e5e5e;
+}
+
+
+.newsfeed-box h2{
+    font-size: 20px;
+    position: absolute;
+    top: -15px;
+    left: 60px;
+}
+.newsfeed-box h3 {
+    font-size: 12px;
+    position: absolute;
+    top: 12px;
+    left: 60px;
+    color: #afafaf;
+}
+.location {
+    position: absolute;
+    top: 280px;
+    right: 7px;
+    font-size: 12px;
+    color: #afafaf;
+}
+.time-posted {
+    position: absolute;
+    top: 299px;
+    right: 10px;
+    font-size: 14px;
+    color: #afafaf;
+}
+.box-icons-row {
+    font-size: 30px;
+    padding-top: 7px;
+    transition: 0.2s ease-in;
+}
+.box-icons-row:hover {
+
+    color: #ff8846;
+}
+
+.col {
+    height: 50px;
+}
+
+.s12 {
+    color: #393939;
+}
+
+/* label color */
+.input-field label {
+    color: #393939;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #393939;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #393939;
+}
+
+.content {
+    background-color: rgba(221, 255, 250, 0.54);
+    border: 2px solid #ffffff;
+    width: 10em;
+    height: 10em;
+    text-align: center;
+    box-shadow: 0px 0px 10px #7b7b7b;
+}
+.add-photo {
+    position: absolute;
+    top: 47vh;
+    left: 47.7vw;
+    color: #2ad1ce;
+    font-size: 3em;
+    text-shadow: -1px 2px 5px #959595;
+}

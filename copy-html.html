@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/f2c79594e8.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body style="width: 360px; position: relative;
+margin-left: auto;
+margin-right: auto;">
+
+<!--header + hamburger menu-->
+<header class="header"
+        style="background-image: url(img/header.png); height: 80px; text-align: center; width: 360px; margin-top: 100px;">
+    <i class="material-icons newsfeed-header menu circle">menu</i>
+    <nav class="nav-hamburger">
+        <ul><h1>Hallo Felix.</h1>
+            <li><a href="#">Meine Reise</a></li>
+            <li><a href="surfspots.html">Surfspot suchen</a></li>
+            <li><a href="#">Meine Traumziele</a></li>
+            <li><a href="#">Einstellungen</a></li>
+            <li><a href="#">Impressum</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="newsfeed-header" style="margin-left: 0px; font-size: 30px;">Sunshine Coast</h1>
+    <i class="material-icons newsfeed-header search" style="margin-left: 20px;">search</i>
+</header>
+
+<!--weisses quadrat oben auf der seite, damit inhalt beim scrollen nicht sichtbar ist-->
+<div style="width: 360px; height: 100px; position: fixed;
+    margin-top: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;"></div>
+
+<!--Hintergrund-->
+<div style="background: url(img/background2.jpg) no-repeat center center fixed; background-size: cover; position: absolute; top: 180px;">
+    <section class="glass">
+        <!--hier: Inhalt der Seite, muss alles in diese section rein, damit der blur-filter hier angewendet wird-->
+    </section>
+</div>
+
+<!--navigation-footer-->
+<footer>
+    <div class="nav">
+        <a href="newsfeed.html"><i class="material-icons nav-icon">home</i></a>
+        <i class="material-icons nav-icon">add_box</i>
+        <i class="material-icons nav-icon mood">local_florist</i>
+        <i class="material-icons nav-icon">chat</i>
+        <i class="material-icons nav-icon">person</i>
+    </div>
+</footer>
+
+<!--javascript code, momentan nur fuer den hamburger menu-->
+<script>
+    var hamburger = {
+        navToggle: document.querySelector('.menu'),
+        nav: document.querySelector('.nav-hamburger'),
+        overlay: document.querySelector('.glass'),
+
+
+        doToggle: function (e) {
+            e.preventDefault();
+            this.navToggle.classList.toggle('expanded');
+            this.nav.classList.toggle('expanded');
+            this.overlay.classList.toggle('expanded');
+        }
+    };
+    console.log(hamburger.overlay);
+    hamburger.navToggle.addEventListener('click', function (e) {
+        hamburger.doToggle(e);
+    });
+</script>

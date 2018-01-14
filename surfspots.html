@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #map {
+            position: absolute;
+            margin-top: 80px;
+            width: 360px;
+            height: 505px;
+            background-color: grey;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/f2c79594e8.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Google maps api-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf6JK-gmGlBlV6z2vGMO2-Wp-lQuCf8Us&libraries=places"></script>
+</head>
+<body style="width: 360px; position: relative; margin-top: 100px;
+margin-left: auto;
+margin-right: auto;">
+<header class="header" style="background-image: url(img/header.png); height: 80px; text-align: center; width: 360px">
+    <i class="material-icons newsfeed-header menu circle">menu</i>
+    <nav class="nav-hamburger">
+        <ul><h1>Hallo Felix.</h1>
+            <li><a href="#">Meine Reise</a></li>
+            <li><a href="surfspots.html">Surfspot suchen</a></li>
+            <li><a href="#">Meine Traumziele</a></li>
+            <li><a href="#">Einstellungen</a></li>
+            <li><a href="#">Impressum</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="newsfeed-header">Surfspots</h1>
+    <i class="material-icons newsfeed-header search">search</i>
+</header>
+<div id="map" class="glass"></div>
+<footer>
+    <div class="nav">
+        <a href="newsfeed.html"><i class="material-icons nav-icon">home</i></a>
+        <i class="material-icons nav-icon">add_box</i>
+        <a href="greensurfing.html"><i class="material-icons nav-icon mood">local_florist</i></a>
+        <i class="material-icons nav-icon">chat</i>
+        <i class="material-icons nav-icon">person</i>
+    </div>
+</footer>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf6JK-gmGlBlV6z2vGMO2-Wp-lQuCf8Us&libraries=places&callback=initMap">
+</script>
+<script>
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+    var hamburger = {
+        navToggle: document.querySelector('.menu'),
+        nav: document.querySelector('.nav-hamburger'),
+        overlay: document.querySelector('.glass'),
+
+
+        doToggle: function(e) {
+            e.preventDefault();
+            this.navToggle.classList.toggle('expanded');
+            this.nav.classList.toggle('expanded');
+            this.overlay.classList.toggle('expanded');
+        }
+    };
+    console.log(hamburger.overlay);
+    hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -26.77209684, lng: 152.97802732},
+            zoom: 10
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+
+        service.getDetails({
+            placeId: 'ChIJ7Uh9bbZ_k2sRUK_e81qjAgM'
+        }, function(place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent('<div><a href="sunshine-coast.html"><strong>' + place.name + '</strong></a><br>' +
+                        '#2 in Australien<br>' +
+                        place.formatted_address + '</div>');
+                    infowindow.open(map, this);
+                });
+            }
+        });
+
+
+
+        service.getDetails({
+            placeId: 'ChIJV2tzDnuZk2sRYKre81qjAgU'
+        }, function(place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+                        '#5 in Australien<br>' +
+                        place.formatted_address + '</div>');
+                    infowindow.open(map, this);
+                });
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://use.fontawesome.com/f2c79594e8.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="bg" style="background-image: url(background.png); height: 640px; width: 360px;">
+    <h1>Du bist fast fertig.</h1>
+    <p class="p7">Verrate uns deine Vorlieben, damit wir deinen Newsfeed personalisieren können.</p>
+    <p class="p7">Hier findest du eine Auswahl an beliebten Tags:</p>
+    <form action="newsfeed.html">
+        <div class="tags-auswahl">
+            <div class="tag">#fashion</div>
+            <div class="tag">#greensurfing</div>
+            <div class="tag">#contest</div>
+            <div class="tag">#australien</div>
+            <div class="tag">#surfboard</div>
+            <div class="tag">#hotspot</div>
+            <div class="tag">#fitness</div>
+            <div class="tag">#america</div>
+            <div class="tag">#surfcamp</div>
+            <div class="tag">#europe</div>
+            <div class="tag">#asia</div>
+            <div class="tag">#vacation</div>
+            <div class="tag">#wsl</div>
+        </div>
+        <div style="text-align: center;">
+            <button type="submit">Los geht's!</button>
+        </div>
+    </form>
+</div>
+<script>
+    var toggletag = {
+        tag: document.querySelectorAll('.tag'),
+
+        doToggle: function(e) {
+        e.preventDefault();
+            for (i = 0; i < toggletag.tag.length; i++) {
+                if (e.target == this.tag[i])
+                    this.tag[i].classList.toggle('expanded');
+            }
+        }
+    };
+    console.log(toggletag.tag);
+    for (i = 0; i < toggletag.tag.length; i++) {
+        toggletag.tag[i].addEventListener('click', function (e) {
+            toggletag.doToggle(e);
+        });
+    }
+</script>
+</body>
+</html>

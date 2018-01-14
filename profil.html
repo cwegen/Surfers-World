@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/f2c79594e8.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body style="width: 360px; position: relative;
+margin-left: auto;
+margin-right: auto;">
+<header class="header"
+        style="background-image: url(img/header.png); height: 80px; text-align: center; width: 360px; margin-top: 100px;">
+    <i class="material-icons newsfeed-header menu circle">menu</i>
+    <nav class="nav-hamburger">
+        <ul><h1>Hallo Felix.</h1>
+            <li><a href="#">Meine Reise</a></li>
+            <li><a href="surfspots.html">Surfspot suchen</a></li>
+            <li><a href="#">Meine Traumziele</a></li>
+            <li><a href="#">Einstellungen</a></li>
+            <li><a href="#">Impressum</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="newsfeed-header" style="margin-left: 0px; font-size: 30px;">@janine.kunze</h1>
+    <i class="material-icons newsfeed-header search" style="margin-left: 20px;">search</i>
+</header>
+<div style="width: 360px; height: 100px; position: fixed;
+    margin-top: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;"></div>
+<div class="glass">
+    <section class="profile-overview" style="text-align: center; padding-top: 190px;">
+        <div class="following">
+            <div class="definer">Folgt</div>
+            <div class="counter">23</div>
+        </div>
+        <img class="circle" src="img/janine.jpg" style="width: 200px; height: 200px;">
+        <div class="follower">
+            <div class="definer">Follower</div>
+            <div class="counter">187</div>
+        </div>
+        <br>
+        <div class="name">Janine Kunze</div>
+        <br>
+        <button class="follow">FOLGE ICH</button>
+        <i class="material-icons message circle">email</i>
+    </section>
+    <section class="view">
+        <i class="material-icons">view_module</i>
+        <i class="material-icons">view_day</i>
+        <i class="material-icons">location_on</i>
+    </section>
+    <section class="imgs">
+        <table class="centered">
+            <tbody>
+            <tr class="imgrow">
+                <th><img class="square" src="img/news1.jpg"></th>
+                <th><img class="square" src="img/news2.jpg"></th>
+                <th><img class="square" src="img/news3.jpg"></th>
+            </tr>
+            <tr class="imgrow">
+                <th><img class="square" src="img/news4.jpg"></th>
+                <th><img class="square" src="img/news5.jpg"></th>
+                <th><img class="square" src="img/news6.jpg"></th>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+<footer>
+    <div class="nav">
+        <a href="newsfeed.html"><i class="material-icons nav-icon">home</i></a>
+        <i class="material-icons nav-icon">add_box</i>
+        <a href="greensurfing.html"><i class="material-icons nav-icon mood">local_florist</i></a>
+        <i class="material-icons nav-icon">chat</i>
+        <i class="material-icons nav-icon">person</i>
+    </div>
+</footer>
+<script>
+    var hamburger = {
+        navToggle: document.querySelector('.menu'),
+        nav: document.querySelector('.nav-hamburger'),
+        overlay: document.querySelector('.glass'),
+
+
+        doToggle: function (e) {
+            e.preventDefault();
+            this.navToggle.classList.toggle('expanded');
+            this.nav.classList.toggle('expanded');
+            this.overlay.classList.toggle('expanded');
+        }
+    };
+    console.log(hamburger.overlay);
+    hamburger.navToggle.addEventListener('click', function (e) {
+        hamburger.doToggle(e);
+    });
+</script>
+
+</body>
+</html>
