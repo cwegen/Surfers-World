@@ -253,8 +253,8 @@ p {
 
 .tags-auswahl {
     display:table-cell; vertical-align:middle;
-    margin: 4%;
-    padding: 4%;
+    margin: 10px;
+    padding: 10px;
     text-align: justify;
 }
 .tag {
@@ -264,7 +264,7 @@ p {
     /*background-color: #36b6c8;*/
     background-color: rgba(195, 240, 246, 0.5);
     border: 1px solid #ffffff;
-    padding: 3% 4.5% 3% 4.5%;
+    padding: 10px 4.2px 10px 4.2px;
     margin-bottom: 5px;
 }
 .tag.expanded {
@@ -379,8 +379,8 @@ header {
 }
 .add-photo {
     position: absolute;
-    top: 47vh;
-    left: 47.7vw;
+    top: 245px;
+    left: 158px;
     color: #2ad1ce;
     font-size: 3em;
     text-shadow: -1px 2px 5px #959595;
